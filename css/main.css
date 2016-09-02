@@ -1,0 +1,99 @@
+body {
+  color: black;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.tolya {
+  font-size: 10px;
+  position: fixed;
+  background: #2C2C2C;
+  width: 1.5em;
+  height: 2.5em;
+  border-radius: 0.4em;
+  top: 200px;
+  left: 50%;
+  cursor: pointer;
+}
+
+.tolya:before {
+  content: '';
+  position: absolute;
+  background: #2C2C2C;
+  height: 2em;
+  width: 0.5em;
+  display: block;
+  margin-left: -0.6em;
+  -webkit-box-shadow: 2.2em 0em 0 0em #2C2C2C,0.70em 2.5em 0 0.1em #2C2C2C, 1.5em 2.5em 0em 0.1em #2C2C2C, 1.5em 2em 0em 0.1em #2C2C2C, 0.7em 2em 0em 0.1em #2C2C2C;
+  box-shadow: 2.2em 0em 0 0em #2C2C2C,0.70em 2.5em 0 0.1em #2C2C2C, 1.5em 2.5em 0em 0.1em #2C2C2C, 1.5em 2em 0em 0.1em #2C2C2C, 0.7em 2em 0em 0.1em #2C2C2C;
+  border-radius: 1em;
+}
+
+.tolya:after {
+  content: '';
+  position: absolute;
+  background: #2C2C2C;
+  height: 1.2em;
+  width: 1.2em;
+  display: block;
+  border-radius: 50%;
+  margin-top: -1.4em;
+  margin-left: 0.15em;
+}
+
+.mail {
+  font-size:12px;
+  display:block;
+  position:relative;
+  border-top:1em solid transparent;
+  border-left:1.5em solid #2c2c2c;
+  border-right:1.5em solid #2c2c2c;
+  border-bottom:1em solid #2c2c2c;
+  height:0;
+  width:0;
+  top: 100px;
+  left: 100px;
+}
+
+.mail:before {
+  content: '';
+  top: -1.23em;
+  left: -1.5em;
+  display: block;
+  position: absolute;
+  border-top: 1em solid #2c2c2c;
+  border-left: 1.5em solid transparent;
+  border-right: 1.5em solid transparent;
+  border-bottom: 1em solid transparent;
+  font-size: 0.8em;
+}
+
+.mail:after {
+  content: 'Outlook';
+  position: absolute;
+  top: -40px;
+  left: -30px;
+  font-size: 20px;
+}
+
+.pl {
+  position: relative;
+  width: 50px;
+  heigth: 50px;
+  top: 500px;
+  left: 500px;
+}
+
+.pl img {
+  width: 50px;
+  heigth: 50px;
+}
+
+.pl:before {
+  content: "PL проекта ХМАО";
+  position: absolute;
+  top: -30px;
+  left: -50px;
+  width: 200px;
+}
