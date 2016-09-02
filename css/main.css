@@ -1,5 +1,5 @@
 body {
-  font-size: 18px;
+  font-size: 20px;
   font-family: Helvetica;
   margin: 0;
 }
@@ -28,7 +28,7 @@ body {
 #disclaimer input {
   position: absolute;
   margin-top: 70px;
-  font-size: 32px;
+  font-size: 40px;
   width: 20%;
   background-color: white;
   color: #3dc;
@@ -50,15 +50,21 @@ body {
 
 #fullgame {
   display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .instr {
   margin: auto;
+  margin-top: 10px;
   width: 500px;
   heigth: 200px;
-  border-left: 2px solid #333;
-  border-right: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border: 2px solid #333;
+  border-radius: 5px;
   background-color: blue;
   color: white;
   padding: 20px;
@@ -75,10 +81,12 @@ body {
 
 #noButton {
   background-color: red;
+  cursor: pointer;
 }
 
 #yesButton {
   background-color: green;
+  cursor: pointer;
 }
 
 .animate {
@@ -137,6 +145,7 @@ body {
   width: 0;
   top: 350px;
   left: 150px;
+  cursor: pointer;
 }
 
 .mail:before {
@@ -161,28 +170,49 @@ body {
 }
 
 .pl {
-  position: fixed;
+  position: absolute;
   bottom: 100px;
   left: 200px;
+  cursor: pointer;
 }
 
 .pl img {
-  width: 50px;
-  heigth: 50px;
+  width: 80px;
+  heigth: 80px;
 }
 
 .pl:before {
   content: "PL проекта ХМАО";
   position: absolute;
   top: -30px;
-  left: -50px;
+  left: -40px;
   width: 200px;
+}
+
+.lena {
+  position: absolute;
+  bottom: 50px;
+  left: 45%;
+  cursor: pointer;
+  width: 125px;
+  height: 105px;
+  background: url('../images/lena.jpg') no-repeat;
+  background-position: -20px -20px;
+}
+
+.lena:before {
+  font-size: 26px;
+  content: "Лена";
+  position: absolute;
+  top: -40px;
+  left: 30px;
 }
 
 .kabinet {
   position: fixed;
-  right: 50px;
-  top: 50px;
+  right: 80px;
+  top: 80px;
+  cursor: pointer;
 }
 
 .kabinet:before {
@@ -198,15 +228,15 @@ body {
 
 .andrew_block {
   position: fixed;
-  top: 70px;
+  top: 20px;
   left: 50px;
 }
 
-.andrew_block:before {
-  content: "Спросить совета";
-  position: absolute;
-  top: -30px;
-  width: 200px;
+.andrew_block p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  content: "Спросить совета!";
 }
 
 .andrew_block img {
@@ -214,6 +244,7 @@ body {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  padding-right: 5px;
 }
 
 .andrew_used {
@@ -222,15 +253,14 @@ body {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
-  opacity: 20%;
-  cursor: default !important;;
+  cursor: default !important;
 }
 
 #hint {
   position: fixed;
   width: 385px;
   background-color: #B0C4DE;
-  top: 120px;
+  top: 105px;
   left: 50px;
   display: none;
 }
@@ -248,6 +278,7 @@ body {
 }
 
 #hint .hint_text {
+  font-size: 16px;
   font-style: italic;
   padding-right: 20px;
 }
