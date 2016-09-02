@@ -1,7 +1,38 @@
 body {
-  font-size: 20px;
-  padding: 0;
+  width: 100%;
+  heigth: 100%;
+  font-size: 18px;
+  font-family: Helvetica;
   margin: 0;
+}
+
+.instr {
+  margin: auto;
+  width: 500px;
+  heigth: 200px;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  color: white;
+  width: 80px;
+  heigth: 40px;
+  font-size: 16px;
+  display: none;
+}
+
+#noButton {
+  background-color: red;
+}
+
+#yesButton {
+  background-color: green;
 }
 
 .animate {
@@ -17,7 +48,7 @@ body {
   width: 1.5em;
   height: 2.5em;
   border-radius: 0.4em;
-  top: 200px;
+  top: 300px;
   left: 50%;
   cursor: pointer;
 }
@@ -84,8 +115,8 @@ body {
 
 .pl {
   position: fixed;
-  top: 500px;
-  left: 500px;
+  bottom: 100px;
+  left: 200px;
 }
 
 .pl img {
@@ -104,12 +135,13 @@ body {
 .kabinet {
   position: fixed;
   right: 20px;
+  top: 20px;
 }
 
 .kabinet:before {
   content: "Кабинет Черкасова";
   position: absolute;
-  left: -180px;
+  left: -160px;
   top: 30px;
 }
 
