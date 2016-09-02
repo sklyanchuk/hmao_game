@@ -6,7 +6,7 @@ document.getElementById('tolya').onclick = function() {
 
   this.style.position = 'fixed';
   alert("Привет! Я Толик! Теперь ты можешь мной управлять! (короч, юзай кнопки влево, вверх там и т.д.)");
-  };
+};
 
 document.getElementById('tolya').onkeydown = function(e) {
   switch (e.keyCode) {
@@ -24,3 +24,19 @@ document.getElementById('tolya').onkeydown = function(e) {
       return false;
     }
 };
+
+document.getElementById('phone').onclick = function() {
+  alert('Вы поднимаете трубку и слышите голос: "Толя, это Дмитришин, я тебе прислал письмо, мне срочно нужен ответ, посмотри. Ты понял?"');
+  var desition = confirm('Голос Дмитришина показался Вам очень грубым. Хотите ли послать его куда подальше?');
+  if (desition) {
+    alert('Дмитришин позвонил Черкасову и теперь Вас вызываеют к нему в кабинет. Похоже, у вас неприятности...');
+    kabinet.classList.add('animate');
+  } else {
+    alert('Невероятное самообладание! Идите уже прочтите это злосчастное письмо!');
+    kabinet.classList.add('animate');
+  }
+  this.classList.remove('mini-phone-enabled');
+  this.classList.add('mini-phone-disabled');
+};
+
+// Плохое решение. Вы отстранены от проекта ХМАО. Конец игры!
