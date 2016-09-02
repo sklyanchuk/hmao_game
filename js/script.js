@@ -1,7 +1,12 @@
-document.getElementById('tolya').addEventListener ('click', playGame);
+document.getElementById('letsPlayButton').addEventListener ('click', startGame);
+function startGame() {
+  document.getElementById('disclaimer').style.display='none';
+  document.getElementById('fullgame').style.display='block';
+}
 
-function playGame() {
-  document.getElementById('tolya').removeEventListener('click', playGame);
+document.getElementById('tolya').addEventListener ('click', firstMove);
+function firstMove() {
+  document.getElementById('tolya').removeEventListener('click', firstMove);
 
   this.style.left = this.getBoundingClientRect().left + 'px';
   this.style.top = this.getBoundingClientRect().top + 'px';

@@ -6,30 +6,37 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-  <div class="instr" id="instr">
-    <p class="comment" id="comment">Приветствую тебя, искатель приключений! <br>Сегодня ты окунешься в потрясающий мир проекта ХМАО! Для начала давай познакомимся с главным персонажем нашей игры, кликни в фигурку человечка в центре страницы.</p>
-    <input type="button" id="noButton" value="Нет"></input>
-    <input type="button" id="yesButton" value="Да"></input>
+  <div class="disclaimer" id="disclaimer">
+    <h1>Дисклеймер</h1>
+    <p>Все персонажи игры являются вымышленными и любое совпадение с реально живущими или когда-либо жившими людьми случайно.</p>
+    <input type="button" id="letsPlayButton" value="ИГРАТЬ"></input>
   </div>
-  <div class="tolya" id="tolya" tabindex="0"></div>
-  <div class="mail" id="mail"></div>
-  <div class="pl" id="pl">
-    <img src="images/excel.png" alt="PL проекта ХМАО"/>
-  </div>
-  <div class="kabinet" id="kabinet">
-    <img src="images/kabinet.jpg" alt="Кабинет Черкасова">
-  </div>
-  <div class="mini-phone-disabled" id="phone"></div>
-  <div class="andrew_block">
-    <img src="images/andrew.png" alt="Подсказка" id="andrew1"/>
-    <img src="images/andrew.png" alt="Подсказка" id="andrew2"/>
-    <img src="images/andrew.png" alt="Подсказка" id="andrew3"/>
-  </div>
-  <div class="hint" id="hint">
-    <img src="images/andrew_hint.jpeg" alt="Руководитель">
-    <p class="hint_text" id="hint_text"></p>
-    <img src="images/close.png" alt="Закрыть" id="close">
-  </div>
+  <main id="fullgame">
+    <div class="instr" id="instr">
+      <p class="comment" id="comment">Приветствую тебя, искатель приключений! <br>Сегодня ты окунешься в потрясающий мир проекта ХМАО! Для начала давай познакомимся с главным персонажем нашей игры, кликни в фигурку человечка в центре страницы.</p>
+      <input type="button" id="noButton" value="Нет"></input>
+      <input type="button" id="yesButton" value="Да"></input>
+    </div>
+    <div class="tolya" id="tolya" tabindex="0"></div>
+    <div class="mail" id="mail"></div>
+    <div class="pl" id="pl">
+      <img src="images/excel.png" alt="PL проекта ХМАО"/>
+    </div>
+    <div class="kabinet" id="kabinet">
+      <img src="images/kabinet.jpg" alt="Кабинет Черкасова">
+    </div>
+    <div class="mini-phone-disabled" id="phone"></div>
+    <div class="andrew_block">
+      <img src="images/andrew.png" alt="Подсказка" id="andrew1"/>
+      <img src="images/andrew.png" alt="Подсказка" id="andrew2"/>
+      <img src="images/andrew.png" alt="Подсказка" id="andrew3"/>
+    </div>
+    <div class="hint" id="hint">
+      <img src="images/andrew_hint.jpeg" alt="Руководитель">
+      <p class="hint_text" id="hint_text"></p>
+      <img src="images/close.png" alt="Закрыть" id="close">
+    </div>
+  </main>
   <script src="js/script.js"></script>
 </body>
 </html>
