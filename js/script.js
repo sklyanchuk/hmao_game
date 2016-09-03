@@ -184,38 +184,58 @@ document.getElementById('tolya').onkeydown = function(e) {
     }
 };
 
-// События по клику на подсказки в левом верхнем углу
-document.getElementById('andrew1').addEventListener('click', getHelp1);
-function getHelp1() {
-  andrew1.classList.add('andrew_used');
-  var hint1 = '&#171Толя, блядь! Покровительство - это, конечно, хорошо, но до опредленных пределов!&#187';
-  hint_text.innerHTML = hint1;
-  document.getElementById('hint').style.display = 'block';
-  document.getElementById('andrew1').removeEventListener('click', getHelp1);
-}
-
-document.getElementById('andrew2').addEventListener('click', getHelp2);
-function getHelp2() {
-  andrew2.classList.add('andrew_used');
-  var hint2 = '&#171Учись задавать вопросы, блядь, Толя!&#187';
-  hint_text.innerHTML = hint2;
-  document.getElementById('hint').style.display='block';
-  document.getElementById('andrew2').removeEventListener('click', getHelp2);
-}
-document.getElementById('andrew3').addEventListener('click', getHelp3);
-function getHelp3() {
-  andrew3.classList.add('andrew_used');
-  var hint3 = '&#171Контролируй доставку корреспонденции, Толя!&#187';
-  hint_text.innerHTML = hint3;
-  document.getElementById('hint').style.display='block';
-  document.getElementById('andrew3').removeEventListener('click', getHelp3);
-}
-
-document.getElementById('close').addEventListener('click', closeHint);
-function closeHint() {
-  document.getElementById('hint').style.display = 'none';
-}
 //
+// Подсказки
+// --------------------
+
+// Элементы всплывающей подсказки:
+var hintPopupElement = document.getElementById('hint');
+var hintPopupTextElement = document.getElementById('hint_text');
+var hintPopupCloseElement = document.getElementById('close');
+
+hintPopupCloseElement.addEventListener('click', closeHint);
+
+// Статус подсказок
+var hintStatusElement = document.getElementById('hint_status');
+
+// Элементы, при нажатии на которые появляется подсказка:
+var hintTriggerElements = document.querySelectorAll('.andrew-hint');
+
+// Сколько подсказок осталось (изначально столько же сколько элементов):
+var hintsAvailable = hintTriggerElements.length;
+
+// Открывает всплывающую подсказку с заданным текстом
+function openHint(hintText) {
+  hintPopupElement.classList.add('opened');
+  hintPopupTextElement.innerText = hintText;
+}
+
+// Закрывает всплывающую подсказку
+function closeHint() {
+  hintPopupElement.classList.remove('opened');
+}
+
+// Активирует подсказку из заданного элемента:
+function getHelp(element) {
+  element.classList.add('andrew_used');
+  openHint(element.getAttribute('data-hint'));
+  if (hintsAvailable <= 0) {
+    hintStatusElement.innerText = 'Больше нет подсказок :(';
+  }
+}
+
+// Инициализирует события для элементов подсказки
+// (события происходят только один раз для каждого элемента)
+Array.prototype.slice.call(hintTriggerElements)
+  .forEach(function (hintTriggerElement) {
+    function once() {
+      hintTriggerElement.removeEventListener('click', once);
+      hintsAvailable -= 1;
+      getHelp(hintTriggerElement);
+    }
+    hintTriggerElement.addEventListener('click', once);
+  });
+
 
 // Показать и скрыть кнопки да/нет
 function showButtons () {
