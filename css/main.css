@@ -221,7 +221,6 @@ body {
   width: 125px;
   height: 105px;
   background: url('../images/lena.jpg') no-repeat;
-  background-position: -20px -20px;
 }
 
 .lena:before {
@@ -230,6 +229,23 @@ body {
   position: absolute;
   top: -40px;
   left: 30px;
+}
+
+/* Настроение Лены */
+.lena_happy {
+  background-position: -20px -20px;
+}
+.lena_angry {
+  background-position: -20px -295px;
+}
+.lena_crying {
+  background-position: -305px -158px;
+}
+.lena_sad {
+  background-position: -162px -158px;
+}
+.lena_surprised {
+  background-position: -20px -158px;
 }
 
 .seleznev {

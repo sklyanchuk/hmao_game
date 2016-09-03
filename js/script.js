@@ -92,12 +92,16 @@ function firstMove() {
 
     function yesButtonClick() {
       hideButtons();
-      var commentDmitrishinCallCherkasov = 'Дмитришин позвонил Черкасову и теперь тебя вызывают к нему в кабинет. Похоже, у тебя неприятности...';
+      var commentDmitrishinCallCherkasov = 'Дмитришин позвонил Черкасову и теперь тебя вызывают к нему в кабинет. Похоже, у тебя неприятности... И посмотри на Лену, она очень недовольна тобой!';
       commentContainer.innerHTML = commentDmitrishinCallCherkasov;
       kabinet.classList.add('animate');
+
+      lena.classList.remove('lena_happy');
+      lena.classList.add('lena_angry');
+
       document.getElementById('kabinet').addEventListener('click', visitCherkasov);
       function visitCherkasov() {
-        var visit1 = 'Ты входишь в кабинет Черкасова. Он стоит и зло смотрит на тебя! "Толя, меня твой Дмитришин заебал. Избавь меня, пожалуйста, от него!!" Как поступишь?';
+        var visit1 = 'Ты входишь в кабинет Черкасова. Он стоит и зло смотрит на тебя! "Толя, блять, меня твой Дмитришин заебал. Избавь меня, пожалуйста, от него!!" Как поступишь?';
         commentContainer.innerHTML = visit1;
         kabinet.classList.remove('animate');
         document.getElementById('options').style.display='block';
@@ -117,6 +121,7 @@ function firstMove() {
           kabinet.classList.add('animate');
           lena.classList.add('animate');
           seleznev.classList.add('animate');
+          tolya.classList.add('animate');
           document.getElementById('option1').removeEventListener('click', doOption1);
         }
         document.getElementById('option2').addEventListener('click', doOption2);
@@ -135,6 +140,10 @@ function firstMove() {
           document.getElementById('options').style.display='none';
           mail.classList.add('animate');
           document.getElementById('mail').addEventListener('click', readEmail);
+
+          lena.classList.remove('lena_angry');
+          lena.classList.add('lena_sad');
+
           function readEmail() {
             var email1 = 'Ты открыл Оутлук, и среди кучи непрочитанных писем нашел письмо от Димтришина: "Толя, где расчеты, блять? Я какой день жду. Если сегодня их у меня не будет, я ищу другого поставщика!!!" Ты пиздец растерян. Что будешь делать?';
             commentContainer.innerHTML = email1;
