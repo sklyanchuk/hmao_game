@@ -309,6 +309,10 @@ body {
   display: none;
 }
 
+#hint.opened {
+  display: block;
+}
+
 #hint img:first-child {
   margin-right: 10px;
   float: left;
