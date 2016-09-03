@@ -1,12 +1,12 @@
 // Обрабатывает клик по кнопке на дисклеймере
-document.getElementById('letsPlayButton').addEventListener ('click', startGame);
+document.getElementById('letsPlayButton').addEventListener('click', startGame);
 function startGame() {
   document.getElementById('disclaimer').style.display='none';
   document.getElementById('fullgame').style.display='block';
 }
 // Дисклеймер исчезает, появляется сама игра
 
-document.getElementById('tolya').addEventListener ('click', firstMove);
+document.getElementById('tolya').addEventListener('click', firstMove);
 function firstMove() {
   document.getElementById('tolya').removeEventListener('click', firstMove);
 
@@ -20,9 +20,9 @@ function firstMove() {
   phone.classList.remove('mini-phone-disabled');
   phone.classList.add('mini-phone-enabled');
 
-  document.getElementById('phone').addEventListener ('click', callPhone);
+  document.getElementById('phone').addEventListener('click', callPhone);
   function callPhone() {
-    document.getElementById('phone').removeEventListener ('click', callPhone);
+    document.getElementById('phone').removeEventListener('click', callPhone);
 
     var commentDmitrishinCallFirst = 'Ты поднимаешь трубку и слышишь голос: "Толя, это Дмитришин, я тебе прислал письмо, мне срочно нужен ответ, посмотри. Ты понял?". Голос Дмитришина показался тебе очень грубым. Хочешь ли послать его куда подальше?';
     commentContainer.innerHTML = commentDmitrishinCallFirst;
@@ -39,7 +39,7 @@ function firstMove() {
       var commentMailFirst = 'У тебя нереальное терпение! Вот это самоконтроль! Иди прочти уже это злосчастное письмо.';
       commentContainer.innerHTML = commentMailFirst;
       mail.classList.add('animate');
-      document.getElementById('mail').addEventListener ('click', readEmail);
+      document.getElementById('mail').addEventListener('click', readEmail);
       function readEmail() {
         var email1 = 'Ты открыл Оутлук, и среди кучи непрочитанных писем нашел письмо от Димтришина: "Толя, где расчеты, блять? Я какой день жду. Если сегодня их у меня не будет, я ищу другого поставщика!!!" Ты пиздец растерян. Что будешь делать?';
         commentContainer.innerHTML = email1;
@@ -53,14 +53,14 @@ function firstMove() {
         var optionThird = 'Посовещаться с Селезневым';
         option3.innerHTML = optionThird;
 
-        document.getElementById('option1').addEventListener ('click', doOption1);
+        document.getElementById('option1').addEventListener('click', doOption1);
         function doOption1() {
           var lenaWait = 'Лена ждет тебя у своего рабочего места!';
           commentContainer.innerHTML = lenaWait;
           document.getElementById('options').style.display='none';
           lena.classList.add('animate');
         }
-        document.getElementById('option2').addEventListener ('click', doOption2);
+        document.getElementById('option2').addEventListener('click', doOption2);
         function doOption2() {
           var doMath = 'Бросай свою жопу на стул и давай заполняй PL';
           commentContainer.innerHTML = doMath;
@@ -68,14 +68,14 @@ function firstMove() {
           pl.classList.add('animate');
         }
 
-        document.getElementById('option3').addEventListener ('click', doOption3);
+        document.getElementById('option3').addEventListener('click', doOption3);
         function doOption3() {
           var findSeleznev = 'Нужно поймать Селезнева, он все летает где-то тут по офису.';
           commentContainer.innerHTML = findSeleznev;
           document.getElementById('options').style.display='none';
           seleznev.classList.add('animate');
         }
-        document.getElementById('mail').removeEventListener ('click', readEmail);
+        document.getElementById('mail').removeEventListener('click', readEmail);
       }
     }
 
@@ -84,7 +84,7 @@ function firstMove() {
       var commentDmitrishinCallCherkasov = 'Дмитришин позвонил Черкасову и теперь тебя вызывают к нему в кабинет. Похоже, у тебя неприятности...';
       commentContainer.innerHTML = commentDmitrishinCallCherkasov;
       kabinet.classList.add('animate');
-      document.getElementById('kabinet').addEventListener ('click', visitCherkasov);
+      document.getElementById('kabinet').addEventListener('click', visitCherkasov);
       function visitCherkasov() {
         var visit1 = 'Ты входишь в кабинет Черкасова. Он стоит и зло смотрит на тебя! "Толя, меня твой Дмитришин заебал. Избавь меня, пожалуйста, от него!!" Как поступишь?';
         commentContainer.innerHTML = visit1;
@@ -98,7 +98,7 @@ function firstMove() {
         var optionThird = 'Извиниться и пообещать все исправить';
         option3.innerHTML = optionThird;
 
-        document.getElementById('option1').addEventListener ('click', doOption1);
+        document.getElementById('option1').addEventListener('click', doOption1);
         function doOption1() {
           var commentFindGuilty = 'Будем искать виновных! Кликни на виноватого!';
           commentContainer.innerHTML = commentFindGuilty;
@@ -106,24 +106,24 @@ function firstMove() {
           kabinet.classList.add('animate');
           lena.classList.add('animate');
           seleznev.classList.add('animate');
-          document.getElementById('option1').removeEventListener ('click', doOption1);
+          document.getElementById('option1').removeEventListener('click', doOption1);
         }
-        document.getElementById('option2').addEventListener ('click', doOption2);
+        document.getElementById('option2').addEventListener('click', doOption2);
         function doOption2() {
           var lenaWait = 'Лена ждет тебя у своего рабочего места!';
           commentContainer.innerHTML = lenaWait;
           document.getElementById('options').style.display='none';
           lena.classList.add('animate');
-          document.getElementById('option2').removeEventListener ('click', doOption2);
+          document.getElementById('option2').removeEventListener('click', doOption2);
         }
 
-        document.getElementById('option3').addEventListener ('click', doOption3);
+        document.getElementById('option3').addEventListener('click', doOption3);
         function doOption3() {
           var appologize = 'Вы дико извиняетесь, говорите много красивых слов, обещаете непременно все-все исправить и, вроде, Черкасов немного успокаивается. Но вам все равно нужно разобраться с этим злосчастным письмом...';
           commentContainer.innerHTML = appologize;
           document.getElementById('options').style.display='none';
           mail.classList.add('animate');
-          document.getElementById('mail').addEventListener ('click', readEmail);
+          document.getElementById('mail').addEventListener('click', readEmail);
           function readEmail() {
             var email1 = 'Ты открыл Оутлук, и среди кучи непрочитанных писем нашел письмо от Димтришина: "Толя, где расчеты, блять? Я какой день жду. Если сегодня их у меня не будет, я ищу другого поставщика!!!" Ты пиздец растерян. Что будешь делать?';
             commentContainer.innerHTML = email1;
@@ -137,14 +137,14 @@ function firstMove() {
             var optionThird = 'Посовещаться с Селезневым';
             option3.innerHTML = optionThird;
 
-            document.getElementById('option1').addEventListener ('click', doOption1);
+            document.getElementById('option1').addEventListener('click', doOption1);
             function doOption1() {
               var lenaWait = 'Лена ждет тебя у своего рабочего места!';
               commentContainer.innerHTML = lenaWait;
               document.getElementById('options').style.display='none';
               lena.classList.add('animate');
             }
-            document.getElementById('option2').addEventListener ('click', doOption2);
+            document.getElementById('option2').addEventListener('click', doOption2);
             function doOption2() {
               var doMath = 'Сади свою жопу на стул и давай заполняй PL';
               commentContainer.innerHTML = doMath;
@@ -152,7 +152,7 @@ function firstMove() {
               pl.classList.add('animate');
             }
 
-            document.getElementById('option3').addEventListener ('click', doOption3);
+            document.getElementById('option3').addEventListener('click', doOption3);
             function doOption3() {
               var findSeleznev = 'Нужно поймать Селезнева, он все летает где-то тут по офису.';
               commentContainer.innerHTML = findSeleznev;
@@ -161,7 +161,7 @@ function firstMove() {
             }
           }
         }
-        document.getElementById('kabinet').removeEventListener ('click', visitCherkasov);
+        document.getElementById('kabinet').removeEventListener('click', visitCherkasov);
       }
     }
   }
@@ -185,33 +185,33 @@ document.getElementById('tolya').onkeydown = function(e) {
 };
 
 // События по клику на подсказки в левом верхнем углу
-document.getElementById('andrew1').addEventListener ('click', getHelp1);
+document.getElementById('andrew1').addEventListener('click', getHelp1);
 function getHelp1() {
   andrew1.classList.add('andrew_used');
   var hint1 = '&#171Толя, блядь! Покровительство - это, конечно, хорошо, но до опредленных пределов!&#187';
   hint_text.innerHTML = hint1;
   document.getElementById('hint').style.display = 'block';
-  document.getElementById('andrew1').removeEventListener ('click', getHelp1);
+  document.getElementById('andrew1').removeEventListener('click', getHelp1);
 }
 
-document.getElementById('andrew2').addEventListener ('click', getHelp2);
+document.getElementById('andrew2').addEventListener('click', getHelp2);
 function getHelp2() {
   andrew2.classList.add('andrew_used');
   var hint2 = '&#171Учись задавать вопросы, блядь, Толя!&#187';
   hint_text.innerHTML = hint2;
   document.getElementById('hint').style.display='block';
-  document.getElementById('andrew2').removeEventListener ('click', getHelp2);
+  document.getElementById('andrew2').removeEventListener('click', getHelp2);
 }
-document.getElementById('andrew3').addEventListener ('click', getHelp3);
+document.getElementById('andrew3').addEventListener('click', getHelp3);
 function getHelp3() {
   andrew3.classList.add('andrew_used');
   var hint3 = '&#171Контролируй доставку корреспонденции, Толя!&#187';
   hint_text.innerHTML = hint3;
   document.getElementById('hint').style.display='block';
-  document.getElementById('andrew3').removeEventListener ('click', getHelp3);
+  document.getElementById('andrew3').removeEventListener('click', getHelp3);
 }
 
-document.getElementById('close').addEventListener ('click', closeHint);
+document.getElementById('close').addEventListener('click', closeHint);
 function closeHint() {
   document.getElementById('hint').style.display = 'none';
 }
