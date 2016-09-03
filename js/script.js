@@ -22,7 +22,7 @@ function firstMove() {
 
   document.getElementById('phone').addEventListener('click', callPhone);
   function callPhone() {
-    document.getElementById('phone').removeEventListener ('click', callPhone);
+    document.getElementById('phone').removeEventListener('click', callPhone);
 
     var commentDmitrishinCallFirst = 'Ты поднимаешь трубку и слышишь голос: "Толя, это Дмитришин, я тебе прислал письмо, мне срочно нужен ответ, посмотри. Ты понял?". Голос Дмитришина показался тебе очень грубым. Хочешь ли послать его куда подальше?';
     commentContainer.innerHTML = commentDmitrishinCallFirst;
@@ -75,7 +75,7 @@ function firstMove() {
           document.getElementById('options').style.display='none';
           seleznev.classList.add('animate');
         }
-        document.getElementById('mail').removeEventListener ('click', readEmail);
+        document.getElementById('mail').removeEventListener('click', readEmail);
       }
     }
 
@@ -106,7 +106,7 @@ function firstMove() {
           kabinet.classList.add('animate');
           lena.classList.add('animate');
           seleznev.classList.add('animate');
-          document.getElementById('option1').removeEventListener ('click', doOption1);
+          document.getElementById('option1').removeEventListener('click', doOption1);
         }
         document.getElementById('option2').addEventListener('click', doOption2);
         function doOption2() {
@@ -114,7 +114,7 @@ function firstMove() {
           commentContainer.innerHTML = lenaWait;
           document.getElementById('options').style.display='none';
           lena.classList.add('animate');
-          document.getElementById('option2').removeEventListener ('click', doOption2);
+          document.getElementById('option2').removeEventListener('click', doOption2);
         }
 
         document.getElementById('option3').addEventListener('click', doOption3);
@@ -161,7 +161,7 @@ function firstMove() {
             }
           }
         }
-        document.getElementById('kabinet').removeEventListener ('click', visitCherkasov);
+        document.getElementById('kabinet').removeEventListener('click', visitCherkasov);
       }
     }
   }
@@ -191,7 +191,7 @@ function getHelp1() {
   var hint1 = '&#171Толя, блядь! Покровительство - это, конечно, хорошо, но до опредленных пределов!&#187';
   hint_text.innerHTML = hint1;
   document.getElementById('hint').style.display = 'block';
-  document.getElementById('andrew1').removeEventListener ('click', getHelp1);
+  document.getElementById('andrew1').removeEventListener('click', getHelp1);
 }
 
 document.getElementById('andrew2').addEventListener('click', getHelp2);
@@ -200,7 +200,7 @@ function getHelp2() {
   var hint2 = '&#171Учись задавать вопросы, блядь, Толя!&#187';
   hint_text.innerHTML = hint2;
   document.getElementById('hint').style.display='block';
-  document.getElementById('andrew2').removeEventListener ('click', getHelp2);
+  document.getElementById('andrew2').removeEventListener('click', getHelp2);
 }
 document.getElementById('andrew3').addEventListener('click', getHelp3);
 function getHelp3() {
@@ -208,7 +208,7 @@ function getHelp3() {
   var hint3 = '&#171Контролируй доставку корреспонденции, Толя!&#187';
   hint_text.innerHTML = hint3;
   document.getElementById('hint').style.display='block';
-  document.getElementById('andrew3').removeEventListener ('click', getHelp3);
+  document.getElementById('andrew3').removeEventListener('click', getHelp3);
 }
 
 document.getElementById('close').addEventListener('click', closeHint);
