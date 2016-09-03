@@ -62,12 +62,11 @@ body {
   margin: auto;
   margin-top: 10px;
   width: 500px;
-  heigth: 200px;
   border: 2px solid #333;
   border-radius: 5px;
   background-color: blue;
   color: white;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -87,6 +86,30 @@ body {
 #yesButton {
   background-color: green;
   cursor: pointer;
+}
+
+#options {
+  display: none;
+  text-align: left;
+}
+
+#options li {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  transition: 0.2s linear;
+  cursor: pointer;
+  background-color: white;
+  color: #3dc;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+#options li:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  color: #3dc;
+  background-color: green;
 }
 
 .animate {
@@ -207,6 +230,27 @@ body {
   top: -40px;
   left: 30px;
 }
+
+.seleznev {
+  position: absolute;
+  bottom: 100px;
+  right: 400px;
+  cursor: pointer;
+}
+
+.seleznev img {
+  width: 80px;
+  heigth: 80px;
+}
+
+.seleznev:before {
+  content: "Миша Селезнев";
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  width: 200px;
+}
+
 
 .kabinet {
   position: fixed;
