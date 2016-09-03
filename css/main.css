@@ -96,7 +96,7 @@ body {
 #options li {
   margin-bottom: 10px;
   border-radius: 10px;
-  border: 2px solid #333;
+  border: 1px solid #333;
   transition: 0.2s linear;
   cursor: pointer;
   background-color: white;
@@ -246,6 +246,9 @@ body {
 }
 .lena_surprised {
   background-position: -20px -158px;
+}
+.lena_shout {
+  background-position: -162px -295px;
 }
 
 .seleznev {

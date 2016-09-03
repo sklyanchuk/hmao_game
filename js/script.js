@@ -115,7 +115,7 @@ function firstMove() {
 
         document.getElementById('option1').addEventListener('click', doOption1);
         function doOption1() {
-          var commentFindGuilty = 'Будем искать виновных! Кликни на виноватого!';
+          var commentFindGuilty = 'Будем искать виновных! Кликни на того, кого ты считаешь виновным во всем!';
           commentContainer.innerHTML = commentFindGuilty;
           document.getElementById('options').style.display='none';
           kabinet.classList.add('animate');
@@ -123,6 +123,47 @@ function firstMove() {
           seleznev.classList.add('animate');
           tolya.classList.add('animate');
           document.getElementById('option1').removeEventListener('click', doOption1);
+          document.getElementById('kabinet').addEventListener('click', cherkasovGuilty);
+          function cherkasovGuilty() {
+            kabinet.classList.remove('animate');
+            lena.classList.remove('animate');
+            seleznev.classList.remove('animate');
+            tolya.classList.remove('animate');
+            lena.classList.remove('lena_angry');
+            lena.classList.add('lena_surprised');
+            var commentFinal = 'Да ты там охуел что ли в конец? Ты, блять, уволен! Game over.';
+            commentContainer.innerHTML = commentFinal;
+            document.getElementById('kabinet').removeEventListener('click', cherkasovGuilty); // КОНЕЦ (увольнение от Черкасова)
+          }
+          document.getElementById('tolya').addEventListener('click', youGuilty);
+          function youGuilty() {
+            kabinet.classList.remove('animate');
+            lena.classList.remove('animate');
+            seleznev.classList.remove('animate');
+            tolya.classList.remove('animate');
+            //
+            document.getElementById('tolya').removeEventListener('click', youGuilty);
+          }
+          document.getElementById('lena').addEventListener('click', lenaGuilty);
+          function lenaGuilty() {
+            kabinet.classList.remove('animate');
+            lena.classList.remove('animate');
+            seleznev.classList.remove('animate');
+            tolya.classList.remove('animate');
+            lena.classList.remove('angry');
+            lena.classList.add('lena_shout');
+            //
+            document.getElementById('lena').removeEventListener('click', lenaGuilty);
+          }
+          document.getElementById('seleznev').addEventListener('click', seleznevGuilty);
+          function seleznevGuilty() {
+            kabinet.classList.remove('animate');
+            lena.classList.remove('animate');
+            seleznev.classList.remove('animate');
+            tolya.classList.remove('animate');
+            //
+            document.getElementById('seleznev').removeEventListener('click', seleznevGuilty);
+          }
         }
         document.getElementById('option2').addEventListener('click', doOption2);
         function doOption2() {
