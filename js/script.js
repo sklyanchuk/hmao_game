@@ -1,18 +1,29 @@
-// Обрабатывает клик по кнопке на дисклеймере
+//
+// Дисклеймер
+// ---------
+
 document.getElementById('letsPlayButton').addEventListener('click', startGame);
 function startGame() {
   document.getElementById('disclaimer').style.display='none';
   document.getElementById('fullgame').style.display='block';
 }
-// Дисклеймер исчезает, появляется сама игра
 
-document.getElementById('tolya').addEventListener('click', firstMove);
+//
+// Сама игра
+// ----------
+
+var character = document.getElementById('tolya');
+
+character.addEventListener('click', firstMove);
 function firstMove() {
-  document.getElementById('tolya').removeEventListener('click', firstMove);
+  character.removeEventListener('click', firstMove);
 
-  this.style.left = this.getBoundingClientRect().left + 'px';
-  this.style.top = this.getBoundingClientRect().top + 'px';
-  this.style.position = 'fixed';
+  window.addEventListener('keydown', moveCharacter);
+
+  character.style.left = character.getBoundingClientRect().left + 'px';
+  character.style.top = character.getBoundingClientRect().top + 'px';
+
+  tolya.classList.remove('animate');
 
   var commentContainer = document.getElementById('comment');
   var commentIntro = '- Привет! Меня зовут Толик! Теперь ты можешь мной управлять с помощью стрелочек на твоей клавиатуре. (Которая, конечно же, сделана под брендом DEPO?) Посмотри справа внизу, похоже, тебе кто-то звонит!';
@@ -167,22 +178,27 @@ function firstMove() {
   }
 }
 
-document.getElementById('tolya').onkeydown = function(e) {
+//
+// Персонаж
+// -------------------
+
+function moveCharacter(e) {
+  var moveDistance = 50;
   switch (e.keyCode) {
     case 37: // влево
-      this.style.left = parseInt(this.style.left) - this.offsetWidth + 'px';
+      character.style.left = parseInt(character.style.left) - moveDistance + 'px';
       return false;
     case 38: // вверх
-      this.style.top = parseInt(this.style.top) - this.offsetHeight + 'px';
+      character.style.top = parseInt(character.style.top) - moveDistance + 'px';
       return false;
     case 39: // вправо
-      this.style.left = parseInt(this.style.left) + this.offsetWidth + 'px';
+      character.style.left = parseInt(character.style.left) + moveDistance + 'px';
       return false;
     case 40: // вниз
-      this.style.top = parseInt(this.style.top) + this.offsetHeight + 'px';
+      character.style.top = parseInt(character.style.top) + moveDistance + 'px';
       return false;
     }
-};
+}
 
 //
 // Подсказки
