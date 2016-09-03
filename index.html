@@ -22,18 +22,24 @@
         <li id="option3">Third</li>
       </ol>
     </div>
-    <div class="tolya" id="tolya" tabindex="0"></div>
-    <div class="mail" id="mail"></div>
-    <div class="pl" id="pl">
+    <div class="tolya" id="tolya" tabindex="0" onMouseOver="toolTip('Толик. Хороший парень и главный герой этой игры. Ничего личного, Толя! :(')"
+onMouseOut="toolTip()"></div>
+    <div class="mail" id="mail" onMouseOver="toolTip('Любимый инструмент любого проектного менеджера - Оутлучек!')"
+onMouseOut="toolTip()"></div>
+    <div class="pl" id="pl" onMouseOver="toolTip('Это, короч, надо считать тут всякую хрень((')"
+onMouseOut="toolTip()">
       <img src="images/excel.png" alt="PL проекта ХМАО">
     </div>
-    <div class="lena" id="lena">
+    <div class="lena" id="lena" onMouseOver="toolTip('Это - Лена. Начальница! В основном следит за тем, чтобы менеджеры контролировали доставку корреспонденции.')"
+onMouseOut="toolTip()">
     </div>
     <div class="seleznev" id="seleznev">
-      <img src="images/seleznev.jpg" alt="">
+      <img src="images/seleznev.jpg" alt="Миша Сеезнев" onMouseOver="toolTip('Это - Миша Селезнев! Вездесущий РП по проектам! Чтобы мы без него делали...')"
+  onMouseOut="toolTip()">
     </div>
     <div class="kabinet" id="kabinet">
-      <img src="images/kabinet.jpg" alt="Кабинет Черкасова">
+      <img src="images/kabinet.jpg" alt="Кабинет Черкасова" onMouseOver="toolTip('Тут обитает Дмитрий Черкасов. Сюда лучше не попадать :(')"
+  onMouseOut="toolTip()">
     </div>
     <div class="mini-phone-disabled" id="phone"></div>
     <div class="andrew_block">
@@ -47,7 +53,9 @@
       <p class="hint_text" id="hint_text"></p>
       <img src="images/close.png" alt="Закрыть" id="close">
     </div>
+    <div id="floatTip"></div>
   </main>
   <script src="js/script.js"></script>
+  <script src="js/tips.js"></script>
 </body>
 </html>
