@@ -7,19 +7,19 @@
 </head>
 <body>
   <div class="disclaimer" id="disclaimer">
-    <h1>Дисклеймер</h1>
+    <h1 class="disclaimer-header">Дисклеймер</h1>
     <p>Все персонажи игры являются вымышленными и любое совпадение с реально живущими или когда-либо жившими людьми случайно.</p>
     <input type="button" id="letsPlayButton" value="ИГРАТЬ"></input>
   </div>
-  <main id="fullgame">
+  <main class="fullgame" id="fullgame">
     <div class="instr" id="instr">
       <p class="comment" id="comment">Приветствую тебя, искатель приключений! <br>Сегодня ты окунешься в потрясающий мир проекта ХМАО! Для начала давай познакомимся с главным персонажем нашей игры, кликни на фигурку человечка в центре страницы.</p>
-      <input type="button" id="noButton" value="Нет"></input>
-      <input type="button" id="yesButton" value="Да"></input>
-      <ol id="options">
-        <li id="option1">First</li>
-        <li id="option2">Second</li>
-        <li id="option3">Third</li>
+      <input type="button" class="noButton" id="noButton" value="Нет"></input>
+      <input type="button" class="yesButton" id="yesButton" value="Да"></input>
+      <ol class="option" id="options">
+        <li class="option1" id="option1">First</li>
+        <li class="option1" id="option2">Second</li>
+        <li class="option1" id="option3">Third</li>
       </ol>
     </div>
     <div class="tolya animate" id="tolya" tabindex="0" onMouseOver="toolTip('Толик. Хороший парень и главный герой этой игры. Ничего личного, Толя! :(')"
@@ -43,7 +43,7 @@ onMouseOut="toolTip()">
     </div>
     <div class="mini-phone-disabled" id="phone"></div>
     <div class="andrew_block">
-      <p id="hint_status">Спроси совета!</p>
+      <p class="hint_status" id="hint_status">Спроси совета!</p>
       <img src="images/andrew.png" alt="Подсказка" data-hint="&#171Толя, блядь! Покровительство - это, конечно, хорошо, но до опредленных пределов!&#187" class="andrew-hint"/>
       <img src="images/andrew.png" alt="Подсказка" data-hint="&#171Учись задавать вопросы, блядь, Толя!&#187" class="andrew-hint"/>
       <img src="images/andrew.png" alt="Подсказка" data-hint="&#171Контролируй доставку корреспонденции, Толя!&#187" class="andrew-hint"/>
@@ -53,7 +53,7 @@ onMouseOut="toolTip()">
       <p class="hint_text" id="hint_text"></p>
       <img src="images/close.png" alt="Закрыть" id="close">
     </div>
-    <div id="floatTip"></div>
+    <div class="floatTip" id="floatTip"></div>
   </main>
   <script src="js/script.js"></script>
   <script src="js/tips.js"></script>
